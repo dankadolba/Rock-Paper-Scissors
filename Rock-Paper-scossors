@@ -1,0 +1,30 @@
+<html> 
+	<head> 
+		<title>Заголовок документа</title>
+
+		<script language="javascript"> 
+		
+		var CompChoice = Math.random();
+		
+		console.log(CompChoice)
+		if (CompChoice <= 0.33)
+		{
+			CompChoice = "Rock";
+		}
+		else if (CompChoice <= 0.66)
+		{
+			CompChoice = "Paper";
+		}
+		else if (CompChoice <= 1)
+		{
+			CompChoice = "Scissors";
+		}
+
+		//var UserChoice = prompt("Make a choice between Rock, Paper and Scissors")
+		console.log(CompChoice)
+		console.log(UserChoice)
+		</script> 
+	</head>
+	<body> 
+	</body> 
+ </html>
