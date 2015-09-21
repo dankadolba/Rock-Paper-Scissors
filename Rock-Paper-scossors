@@ -6,7 +6,6 @@
 		
 		var CompChoice = Math.random();
 		
-		console.log(CompChoice)
 		if (CompChoice <= 0.33)
 		{
 			CompChoice = "Rock";
@@ -20,9 +19,51 @@
 			CompChoice = "Scissors";
 		}
 
-		//var UserChoice = prompt("Make a choice between Rock, Paper and Scissors")
+		var UserChoice = prompt("Make a choice between Rock, Paper and Scissors:")
 		console.log(CompChoice)
 		console.log(UserChoice)
+		
+		var Referee = function(UChoice, CChoice)
+		{
+			if (UChoice === CChoice)
+			{
+				return "Tie!";
+			}
+			else if (UChoice === "Rock")
+			{
+				if (CChoice === "Paper")
+				{
+					return "Computer win!";
+				}
+				else
+				{
+					return "You win!";
+				}
+			}
+			else if (UChoice === "Paper")
+			{
+				if (CChoice === "Scissors")
+				{
+					return "Computer win!";
+				}
+				else
+				{
+					return "You win!";
+				}
+			}
+			else if (UChoice === "Scissors")
+			{
+				if (CChoice === "Rock")
+				{
+					return "Computer win!";
+				}
+				else
+				{
+					return "You win!";
+				}
+			}
+		};
+		console.log(Referee(UserChoice, CompChoice))
 		</script> 
 	</head>
 	<body> 
