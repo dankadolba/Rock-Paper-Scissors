@@ -77,7 +77,7 @@
 				
 			};
 			alert("Computer choice is " + CompChoice + ";\n" + "You choice is " + UserChoice + ";\n" + Referee(UserChoice, CompChoice))
-			GameStatus = prompt("Game over.\nIf you dont want to play again write: Exit")
+			GameStatus = prompt("Game over.\nIf you dont want to play again write: Exit. If you want to play again write any another text.")
 		}
         </script>
 	</head>
