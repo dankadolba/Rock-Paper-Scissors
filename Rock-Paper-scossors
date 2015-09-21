@@ -1,6 +1,6 @@
 <html> 
 	<head> 
-		<title>Заголовок документа</title>
+		<title>Rock-Paper-Scissors</title>
 
 		<script language="javascript"> 
 		
@@ -20,8 +20,8 @@
 		}
 
 		var UserChoice = prompt("Make a choice between Rock, Paper and Scissors:")
-		console.log(CompChoice)
-		console.log(UserChoice)
+		/*console.log(CompChoice)
+		console.log(UserChoice)*/
 		
 		var Referee = function(UChoice, CChoice)
 		{
@@ -63,7 +63,7 @@
 				}
 			}
 		};
-		console.log(Referee(UserChoice, CompChoice))
+		alert("Computer choice is " + CompChoice + ";\n" + "You choice is " + UserChoice + ";\n" + Referee(UserChoice, CompChoice))
 		</script> 
 	</head>
 	<body> 
