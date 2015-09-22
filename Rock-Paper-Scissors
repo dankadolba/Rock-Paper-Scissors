@@ -4,10 +4,12 @@
 
 		<script language="javascript"> 
 		
-
-		var GameStatus =  "true"
+		var UserScore = 0
+		var CompScore = 0
+		var GameStatus = true
 		while (GameStatus)
 		{
+			var res = 0
 			if (GameStatus === "Exit")
 			{
 				break;
@@ -33,21 +35,24 @@
 				var UserChoice = prompt("Make a choice between Rock, Paper and Scissors:")
 				/*console.log(CompChoice)
 				console.log(UserChoice)*/
-		
+			
 				var Referee = function(UChoice, CChoice)
 				{
 					if (UChoice === CChoice)
 					{
+						res = "Tie!";
 						return "Tie!";
 					}
 					else if (UChoice === "Rock")
 					{
 						if (CChoice === "Paper")
 						{
+							res = "Computer win!";
 							return "Computer win!";
 						}
 						else
 						{
+							res = "You win!";
 							return "You win!";
 						}
 					}
@@ -55,10 +60,12 @@
 					{
 						if (CChoice === "Scissors")
 						{
+							res = "Computer win!"
 							return "Computer win!";
 						}
 						else
 						{
+							res = "You win!";
 							return "You win!";
 						}
 					}
@@ -66,18 +73,35 @@
 					{
 						if (CChoice === "Rock")
 						{
+							res = "Computer win!"
 							return "Computer win!";
 						}
 						else
 						{
+							res = "You win!";
 							return "You win!";
 						}	
 					}
+
 				}
 				
 			};
 			alert("Computer choice is " + CompChoice + ";\n" + "You choice is " + UserChoice + ";\n" + Referee(UserChoice, CompChoice))
-			GameStatus = prompt("Game over.\nIf you dont want to play again write: Exit. If you want to play again write any another text.")
+			
+			if (res === "Tie!")
+			{
+				CompScore += 0.5;
+				UserScore += 0.5;
+			}
+			else if (res === "You win!")
+			{
+				UserScore++;
+			}
+			else if (res === "Computer win!")
+			{
+				CompScore++;
+			}
+			GameStatus = prompt("Game over.\nScore: You - " + UserScore + ". Computer - " + CompScore + ".\nIf you dont want to play again write: Exit. If you want to play again write any another text.")
 		}
         </script>
 	</head>
