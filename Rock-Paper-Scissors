@@ -20,19 +20,19 @@
 
 				if (CompChoice <= 0.33)
 				{
-				CompChoice = "Rock";
+				CompChoice = "rock";
 				}
 			
 				else if (CompChoice <= 0.66)
 				{
-					CompChoice = "Paper";
+					CompChoice = "paper";
 				}
 				else if (CompChoice <= 1)
 				{
-					CompChoice = "Scissors";
+					CompChoice = "scissors";
 				}
 
-				var UserChoice = prompt("Make a choice between Rock, Paper and Scissors:")
+				var UserChoice = prompt("Make a choice between rock, paper and scissors:").toLowerCase();
 				/*console.log(CompChoice)
 				console.log(UserChoice)*/
 			
@@ -43,9 +43,9 @@
 						res = "Tie!";
 						return "Tie!";
 					}
-					else if (UChoice === "Rock")
+					else if (UChoice === "rock")
 					{
-						if (CChoice === "Paper")
+						if (CChoice === "paper")
 						{
 							res = "Computer win!";
 							return "Computer win!";
@@ -56,9 +56,9 @@
 							return "You win!";
 						}
 					}
-					else if (UChoice === "Paper")
+					else if (UChoice === "paper")
 					{
-						if (CChoice === "Scissors")
+						if (CChoice === "scissors")
 						{
 							res = "Computer win!"
 							return "Computer win!";
@@ -69,9 +69,9 @@
 							return "You win!";
 						}
 					}
-					else if (UChoice === "Scissors")
+					else if (UChoice === "scissors")
 					{
-						if (CChoice === "Rock")
+						if (CChoice === "rock")
 						{
 							res = "Computer win!"
 							return "Computer win!";
@@ -101,7 +101,7 @@
 			{
 				CompScore++;
 			}
-			GameStatus = prompt("Game over.\nScore: You - " + UserScore + ". Computer - " + CompScore + ".\nIf you dont want to play again write: Exit. If you want to play again write any another text.")
+			GameStatus = prompt("Game over.\nScore: You - " + UserScore + ". Computer - " + CompScore + ".\nIf you dont want to play again write: Exit. If you want to play again write any another text.").toLowerCase();
 		}
         </script>
 	</head>
